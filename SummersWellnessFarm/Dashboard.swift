@@ -16,5 +16,5 @@ struct Dashboard: View {
 }
 
 #Preview {
-    ContentView()
+    Dashboard()
 }
