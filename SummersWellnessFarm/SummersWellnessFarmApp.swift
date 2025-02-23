@@ -4,7 +4,11 @@
 //
 //  Created by Grace Beard on 2/16/25.
 //  Test
+//<<<<<<< HEAD
 //Test tia 2.22
+//=======
+// test 1
+//>>>>>>> main
 
 import SwiftUI
 
