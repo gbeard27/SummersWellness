@@ -12,8 +12,9 @@ import SwiftUI
 struct SummersWellnessFarmApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .modelContainer(for: [Booking.self, Activity.self])
+            LoginView()
+                .modelContainer(for: [User.self, Booking.self, Activity.self])
+            
         }
     }
 }

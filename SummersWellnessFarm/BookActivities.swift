@@ -40,6 +40,8 @@ class Booking: Identifiable {
         self.selectedDay = selectedDay
         self.selectedTime = selectedTime
         self.bookedSlots = bookedSlots
+        
+        @Relationship var user: User
     }
 }
 

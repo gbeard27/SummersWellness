@@ -99,7 +99,7 @@ struct FoodFormView: View {
     }
 }
 
-struct DashboardView: View {
+struct DashboardFoodView: View {
     @ObservedObject var viewModel: GuestPreferencesViewModel
     
     var body: some View {

@@ -18,38 +18,3 @@ struct CustomButtonStyle: ViewModifier{
             .shadow(radius:5)
     }
 }
-
-struct ContentView: View {
-    var body: some View {
-
-
-    
-        NavigationStack{
-            Text("Summers Wellness Farm")
-                .font(.largeTitle)
-                .padding()
-            Text("Welcome Name!")
-            
-            
-            // Dashboard button
-            NavigationLink(destination: Dashboard()){
-                Text("Personal Dashboard")
-                    .modifier(CustomButtonStyle())
-            }
-            NavigationLink(destination: WeddingDashboard()){
-                Text("Wedding Dashboard")
-                    .modifier(CustomButtonStyle())
-            }
-            NavigationLink(destination: WeddingDashboard()){
-                Text("Corporate Dashboard")
-                    .modifier(CustomButtonStyle())
-            }
-                    }
-
-        Text("Summers Wellness Farm")
-            .font(.largeTitle)
-                .padding()
-        Text("Welcome Name!")
-
-    }
-}

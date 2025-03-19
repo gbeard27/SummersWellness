@@ -4,7 +4,7 @@ import SwiftData
 struct Dashboard: View {
     @Environment(\.modelContext) private var modelContext
     @Query var bookings: [Booking]
-    
+    var viewModel: DashboardViewModel // Observe the view model
     var body: some View {
         VStack{
             Text("Dashboard")
@@ -12,9 +12,9 @@ struct Dashboard: View {
                 .padding()
             
             SectionView(title: "Personal Info", content: """
-            - Name: Jane Doe
+            "Welcome, \(viewModel.user.name)!"
             - Room Number: 301
-            - Email: example@summerswellness.com
+            - "Email: \(viewModel.user.email)"
             """)
             
             SectionView(title: "Booked Activities", content: bookedActivitiesText())
@@ -79,9 +79,9 @@ struct Dashboard: View {
 }
     
     
-#Preview {
-    Dashboard()
-        .modelContainer(for: Booking.self)
+//#Preview {
+  //  Dashboard(user: <#User#>)
+    //    .modelContainer(for: Booking.self)
 
-}
+//}
 
