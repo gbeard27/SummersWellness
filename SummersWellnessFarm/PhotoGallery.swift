@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct ResortPhotoGallery: View {
-    @State private var selectedArea: String = "Outdoors"
+    /*@State private var selectedArea: String = "Outdoors"
     @State private var areas = [
         "Outdoors": ["TreesFarm", "ChapelFarm", "OutdoorsFarm", "TreesFarm"],
         "Farm": ["download", "ChapelFarm", "OutdoorsFarm"],
         "Garden": ["download", "ChapelFarm", "OutdoorsFarm", "TreesFarm"],
         "Barn": ["OutdoorsFarm", "TreesFarm", "download", "ChapelFarm"],
         "Ballroom": ["download", "TreesFarm","ChapelFarm", "OutdoorsFarm"]
+    ]*/
+    
+    @State private var selectedArea: String = "Outdoors"
+    @State private var areas = [
+        "Outdoors": ["outdoor1", "outdoor2", "outdoor3"],
+        "Farm": ["farm1","farm2","farm3"],
+        "Garden": ["garden1","garden2","garden3"],
+        "Barn": ["download-1","download 2", "barn2","barn3" ],
+        "Ballroom": ["ChapelFarm", "download-6", "download-8"],
+        "All": ["outdoor1", "outdoor2", "outdoor3", "farm1","farm2","farm3", "garden1","garden2","garden3", "download-1","download 2", "barn2","barn3", "ChapelFarm", "download-6", "download-8"]
     ]
 
     var body: some View {
