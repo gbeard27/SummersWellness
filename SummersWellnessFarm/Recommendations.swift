@@ -13,8 +13,8 @@ struct Recommendations: View {
             VStack(alignment: .leading, spacing: 20) {
                 // Header Section
                 Text("Personalized Recommendations")
-                    .font(.custom("AvenirNext-Regular", size: 34))
-                    .fontWeight(.bold)
+                    .font(.custom("AvenirNext-Bold", size: 34))
+                    .foregroundColor(Color(red: 59/255, green: 41/255, blue: 30/255).opacity(0.85))
                     .padding(.top, 20)
 
                 // Sustainability Section
@@ -33,6 +33,8 @@ struct Recommendations: View {
                 Spacer()
             }
             .padding(.horizontal, 20)
+            .background(Color(red: 228/255, green: 173/255, blue: 102/255).opacity(0.03))
+
         }
     }
 }
@@ -43,4 +45,5 @@ struct Recommendations: View {
         Recommendations()
     }
 }
+
 

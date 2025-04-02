@@ -30,21 +30,23 @@ struct CorporateBookingView: View {
         VStack(alignment: .leading, spacing: 20) {
             // Title
             Text("Book a Space")
-                .font(.custom("AvenirNext-Regular", size: 34))
-                .fontWeight(.bold)
+                .font(.custom("AvenirNext-Bold", size: 34))
+                .foregroundColor(Color(red: 59/255, green: 41/255, blue: 30/255).opacity(0.85))
                 .padding(.horizontal)
             
             // Date Picker
             DatePicker("Select Booking Date", selection: $selectedDate, displayedComponents: .date)
                 .padding()
-                .background(Color(.systemBackground))
+                .font(.custom("AvenirNext-Regular", size: 22))
+                .foregroundColor(Color(red: 59/255, green: 41/255, blue: 30/255).opacity(0.85))
+                .background(Color(red: 129/255, green: 100/255, blue: 73/255).opacity(0.08))
                 .cornerRadius(10)
                 .shadow(radius: 5)
             
             // List of Corporate Spaces
             Text("Available Spaces")
                 .font(.custom("AvenirNext-Regular", size: 22))
-                .fontWeight(.bold)
+                .foregroundColor(Color(red: 59/255, green: 41/255, blue: 30/255).opacity(0.85))
                 .padding(.horizontal)
             
             List(corporateSpaces) { space in
@@ -63,10 +65,10 @@ struct CorporateBookingView: View {
             }) {
                 Text("Book Now")
                     .font(.custom("AvenirNext-Regular", size: 17))
-                    .foregroundColor(.white)
+                    .foregroundColor(Color(red: 59/255, green: 41/255, blue: 30/255).opacity(0.85))
                     .padding()
                     .frame(maxWidth: .infinity)
-                    .background(selectedSpace == nil ? Color.gray : Color.green)
+                    .background(selectedSpace == nil ? Color(red: 129/255, green: 100/255, blue: 73/255).opacity(0.08) : Color(red: 67/255, green: 103/255, blue: 70/255).opacity(0.1))
                     .cornerRadius(10)
                     .shadow(radius: 5)
             }
@@ -113,20 +115,22 @@ struct CorporateSpaceRow: View {
             
             VStack(alignment: .leading, spacing: 5) {
                 Text(space.name)
-                    .font(.custom("AvenirNext-Regular", size: 17))
+                    .font(.custom("AvenirNext-Regular", size: 22))
+                    .foregroundColor(Color(red: 59/255, green: 41/255, blue: 30/255).opacity(0.85))
                 Text(space.description)
-                    .font(.custom("AvenirNext-Regular", size: 15))
-                    .foregroundColor(.gray)
+                    .font(.custom("AvenirNext-Regular", size: 17))
+                    .foregroundColor(Color(red: 59/255, green: 41/255, blue: 30/255).opacity(0.85))
                 Text("$\(String(format: "%.2f", space.pricePerDay)) / day")
-                    .font(.custom("AvenirNext-Regular", size: 15))
-                    .foregroundColor(.green)
+                    .font(.custom("AvenirNext-Regular", size: 17))
+                    .foregroundColor(Color(red: 59/255, green: 41/255, blue: 30/255).opacity(0.85))
             }
             
             Spacer()
         }
         .padding()
-        .background(isSelected ? Color.green.opacity(0.1) : Color(.systemBackground))
+        .background(isSelected ? Color(red: 67/255, green: 103/255, blue: 70/255).opacity(0.1) : Color(red: 129/255, green: 100/255, blue: 73/255).opacity(0.08))
         .cornerRadius(10)
+        .background(Color(red: 228/255, green: 173/255, blue: 102/255).opacity(0.03))
     }
 }
 
@@ -135,3 +139,4 @@ struct CorporateBookingView_Previews: PreviewProvider {
         CorporateBookingView()
     }
 }
+

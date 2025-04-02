@@ -11,7 +11,6 @@
 
 struct WeddingDashboard: View {
     let viewModel: DashboardViewModel
-    
     var body: some View {
         VStack{
             Text("Wedding Dashboard")
@@ -108,7 +107,7 @@ struct WeddingDashboard: View {
                 // BUTTON GRID
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 20) {
                     DashboardWideButton(title: "Book Activities")
-                    DashboardWideButton(title: "Explore The Farm")
+                    DashboardWideButton(title: "Explore the Farm")
                     DashboardWideButton(title: "Book Rental Space")
                     DashboardWideButton(title: "View Resort Spaces and Themes")
                     DashboardWideButton(title: "Book a Tour")
@@ -121,3 +120,4 @@ struct WeddingDashboard: View {
         .background(Color(red: 228/255, green: 173/255, blue: 102/255).opacity(0.03))
     }
 }
+

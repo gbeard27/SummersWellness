@@ -22,30 +22,44 @@ struct SignupView: View {
         VStack {
             TextField("Full Name", text: $name)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
+                .font(.custom("AvenirNext-Regular", size: 22))
+                .foregroundColor(Color(red: 59/255, green: 41/255, blue: 30/255).opacity(0.85))
+                .background(Color(red: 129/255, green: 100/255, blue: 73/255).opacity(0.08))
                 .padding()
             
             TextField("Email", text: $email)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
+                .font(.custom("AvenirNext-Regular", size: 22))
+                .foregroundColor(Color(red: 59/255, green: 41/255, blue: 30/255).opacity(0.85))
+                .background(Color(red: 129/255, green: 100/255, blue: 73/255).opacity(0.08))
                 .padding()
                 .keyboardType(.emailAddress)
 
             SecureField("Password", text: $password)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
+                .font(.custom("AvenirNext-Regular", size: 22))
+                .foregroundColor(Color(red: 59/255, green: 41/255, blue: 30/255).opacity(0.85))
+                .background(Color(red: 129/255, green: 100/255, blue: 73/255).opacity(0.08))
                 .padding()
 
             SecureField("Confirm Password", text: $confirmPassword)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
+                .font(.custom("AvenirNext-Regular", size: 22))
+                .foregroundColor(Color(red: 59/255, green: 41/255, blue: 30/255).opacity(0.85))
+                .background(Color(red: 129/255, green: 100/255, blue: 73/255).opacity(0.08))
                 .padding()
 
             Button(action: createAccount) {
                 Text("Sign Up")
                     .padding()
                     .frame(maxWidth: .infinity)
-                    .background(Color.blue)
+                    .font(.custom("AvenirNext-Regular", size: 22))
+                    .background(Color(red: 67/255, green: 103/255, blue: 70/255))
                     .foregroundColor(.white)
                     .cornerRadius(8)
             }
             .padding()
+            .background(Color(red: 228/255, green: 173/255, blue: 102/255).opacity(0.03))
         }
         .padding()
         .alert(isPresented: $showAlert) {
@@ -98,3 +112,4 @@ struct SignupView: View {
         }
     }
 }
+

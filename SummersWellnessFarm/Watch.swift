@@ -22,8 +22,8 @@ struct WatchIntegrationView: View {
     var body: some View {
         VStack(spacing: 20) {
             Text("Watch Integration")
-                .font(.custom("AvenirNext-Regular", size: 34))
-                .fontWeight(.bold)
+                .font(.custom("AvenirNext-Bold", size: 34))
+                .foregroundColor(Color(red: 59/255, green: 41/255, blue: 30/255).opacity(0.85))
                 .padding(.top, 30)
             
             Button(action: {
@@ -54,3 +54,4 @@ struct WatchIntegrationView: View {
 #Preview {
     WatchIntegrationView()
 }
+
