@@ -98,8 +98,8 @@ struct CorporateDashboard: View {
 
                 // BUTTON GRID
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 20) {
-                    DashboardWideButton(title: "Book Activities")
-                    DashboardWideButton(title: "Explore The Farm")
+                    DashboardWideButton(title: "Book Large Group Activities")
+                    DashboardWideButton(title: "Explore the Farm")
                     DashboardWideButton(title: "Book Rental Space")
                 }
                 .padding(.horizontal, 24)
@@ -110,3 +110,4 @@ struct CorporateDashboard: View {
         .background(Color(red: 228/255, green: 173/255, blue: 102/255).opacity(0.03))
     }
 }
+

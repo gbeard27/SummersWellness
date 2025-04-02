@@ -92,3 +92,4 @@ struct LargeBookActivities: View {
             .modelContainer(for: [Booking.self, Activity.self])
     }
 }
+

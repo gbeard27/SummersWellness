@@ -4,17 +4,16 @@
 //
 //  Created by Tia Li on 2/22/25.
 // This is the farm to table page needs to be connected to button
-// plzzzz work 
+// plzzzz work
 import SwiftUI
 
 struct FarmToTableView: View {
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 20) {
+            VStack(alignment: .center, spacing: 20) {
                 // Header Section
                 Text("Farm to Table Experience")
-                    .font(.custom("AvenirNext-Regular", size: 34))
-                    .fontWeight(.bold)
+                    .font(.custom("AvenirNext-Bold", size: 34))
                     .padding(.top, 20)
 
                 // Sustainability Section
@@ -65,15 +64,14 @@ struct SectionView: View {
         VStack(alignment: .leading, spacing: 10) {
             Text(title)
                 .font(.custom("AvenirNext-Regular", size: 22))
-                .fontWeight(.semibold)
 
             Text(content)
-                .font(.body)
-                .foregroundColor(.secondary)
+                .font(.custom("AvenirNext-Regular", size: 22))
+                .foregroundColor(Color(red: 59/255, green: 41/255, blue: 30/255).opacity(0.85))
                 .lineSpacing(5)
         }
         .padding()
-        .background(Color(.systemBackground))
+        .background(Color(red: 228/255, green: 173/255, blue: 102/255).opacity(0.03))
         .cornerRadius(10)
         .shadow(radius: 2)
     }
@@ -90,4 +88,5 @@ struct FarmToTableView_Previews: PreviewProvider {
         FarmToTableView()
     }
 }
+
 

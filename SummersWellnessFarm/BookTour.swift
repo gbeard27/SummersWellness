@@ -28,21 +28,25 @@ struct BookTour: View {
         VStack(alignment: .leading, spacing: 20) {
             // Title
             Text("Book a Tour")
-                .font(.largeTitle)
-                .fontWeight(.bold)
+                .font(.custom("AvenirNext-Bold", size: 34))
+                .foregroundColor(Color(red: 59/255, green: 41/255, blue: 30/255).opacity(0.85))
+                .frame(maxWidth: .infinity, alignment: .center)
+                .multilineTextAlignment(.center)
                 .padding(.horizontal)
             
             // Date Picker
             DatePicker("Select Tour Date", selection: $selectedDate, displayedComponents: .date)
                 .padding()
+                .font(.custom("AvenirNext-Bold", size: 22))
+                .foregroundColor(Color(red: 59/255, green: 41/255, blue: 30/255).opacity(0.85))
                 .background(Color(.systemBackground))
                 .cornerRadius(10)
                 .shadow(radius: 5)
             
             // List of Available Tours
             Text("Available Tours")
-                .font(.title2)
-                .fontWeight(.bold)
+                .font(.custom("AvenirNext-Regular", size: 22))
+                .foregroundColor(Color(red: 59/255, green: 41/255, blue: 30/255).opacity(0.85))
                 .padding(.horizontal)
             
             List(availableTours) { tour in
@@ -60,11 +64,11 @@ struct BookTour: View {
                 }
             }) {
                 Text("Book Now")
-                    .font(.headline)
-                    .foregroundColor(.white)
+                    .font(.custom("AvenirNext-Regular", size: 22))
+                    .foregroundColor(Color(red: 59/255, green: 41/255, blue: 30/255).opacity(0.85))
                     .padding()
                     .frame(maxWidth: .infinity)
-                    .background(selectedTour == nil ? Color.gray : Color.green)
+                    .background(selectedTour == nil ? Color(red: 67/255, green: 103/255, blue: 70/255).opacity(0.2) : Color(red: 67/255, green: 103/255, blue: 70/255).opacity(0.1))
                     .cornerRadius(10)
                     .shadow(radius: 5)
             }
@@ -82,6 +86,7 @@ struct BookTour: View {
                 secondaryButton: .cancel()
             )
         }
+        .background(Color(red: 228/255, green: 173/255, blue: 102/255).opacity(0.03))
     }
     
     // Helper function to format the date
@@ -101,19 +106,21 @@ struct TourRow: View {
         HStack {
             VStack(alignment: .leading) {
                 Text(tour.name)
-                    .font(.headline)
+                    .font(.custom("AvenirNext-Regular", size: 22))
+                    .foregroundColor(Color(red: 59/255, green: 41/255, blue: 30/255).opacity(0.85))
                 Text(tour.description)
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
+                    .font(.custom("AvenirNext-Regular", size: 17))
+                    .foregroundColor(Color(red: 59/255, green: 41/255, blue: 30/255).opacity(0.65))
             }
             Spacer()
             if isSelected {
                 Image(systemName: "checkmark.circle.fill")
-                    .foregroundColor(.green)
+                    .font(.custom("AvenirNext-Regular", size: 22))
+                    .foregroundColor(Color(red: 67/255, green: 103/255, blue: 70/255).opacity(0.85))
             }
         }
         .padding()
-        .background(isSelected ? Color.green.opacity(0.2) : Color.clear)
+        .background(isSelected ? Color(red: 67/255, green: 103/255, blue: 70/255).opacity(0.1) : Color.clear)
         .cornerRadius(10)
     }
 }

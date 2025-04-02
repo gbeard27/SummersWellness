@@ -4,7 +4,6 @@
 //
 //  Created by Sadie Hendrickson on 3/10/25.
 //
-
 import SwiftUI
 
 struct ActivityRecs: View {
@@ -23,8 +22,8 @@ struct ActivityRecs: View {
         NavigationStack { // Replacing deprecated NavigationView
             VStack(spacing: 20) {
                 Text("What kind of activities are you looking to do?")
-                    .font(.title)
-                    .fontWeight(.bold)
+                    .font(.custom("AvenirNext-Regular", size: 25))
+                    .foregroundColor(Color(red: 59/255, green: 41/255, blue: 30/255).opacity(0.85))
                     .padding()
                 
                 // Activity category selection
@@ -40,13 +39,14 @@ struct ActivityRecs: View {
                 // Show recommended activities if categories are selected
                 if !recommendedActivities.isEmpty {
                     Text("Recommended Activities")
-                        .font(.title2)
-                        .fontWeight(.bold)
+                        .font(.custom("AvenirNext-Regular", size: 22))
+                        .foregroundColor(Color(red: 59/255, green: 41/255, blue: 30/255).opacity(0.85))
                         .padding()
                     
                     ForEach(recommendedActivities, id: \.self) { activity in
                         Text(activity)
-                            .font(.headline)
+                            .font(.custom("AvenirNext-Regular", size: 22))
+                            .foregroundColor(Color(red: 59/255, green: 41/255, blue: 30/255).opacity(0.85))
                             .padding()
                     }
                 }
@@ -55,16 +55,16 @@ struct ActivityRecs: View {
                     recommendActivities()
                 }) {
                     Text("Get Recommendations")
-                        .font(.title)
-                        .fontWeight(.bold)
+                        .font(.custom("AvenirNext-Regular", size: 25))
                         .padding()
-                        .background(Color.blue)
+                        .background(Color(red: 67/255, green: 103/255, blue: 70/255))
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
                 .padding()
             }
             .padding()
+            .background(Color(red: 228/255, green: 173/255, blue: 102/255).opacity(0.03))
         }
     }
     
@@ -116,9 +116,10 @@ struct MultipleChoiceButton: View {
         }) {
             HStack {
                 Image(systemName: isSelected ? "checkmark.circle.fill" : "circle")
-                    .foregroundColor(isSelected ? .blue : .gray)
+                    .foregroundColor(isSelected ? Color(red: 67/255, green: 103/255, blue: 70/255).opacity(0.1) : Color(red: 129/255, green: 100/255, blue: 73/255).opacity(0.08))
                 Text(title)
-                    .font(.headline)
+                    .font(.custom("AvenirNext-Regular", size: 34))
+                    .foregroundColor(Color(red: 59/255, green: 41/255, blue: 30/255).opacity(0.85))
                     .padding()
             }
         }
