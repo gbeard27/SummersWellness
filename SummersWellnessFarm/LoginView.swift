@@ -49,7 +49,7 @@ struct LoginView: View {
                         NavigationLink(value: type) {
                             Text("\(type.rawValue) Dashboard")
                         }
-                            .buttonStyle(.borderedProminent)
+                            .modifier(CustomButtonStyle())
                             .padding()
                     }
 
