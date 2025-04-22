@@ -519,11 +519,33 @@ struct CalorieTrackerForm: View {
                     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                     isLoading = true
                     resultToShow = nil
-
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                        isLoading = false
-                        resultToShow = CalorieResult(summary: "Summary\nMeal Calories: 1500\nActivity Calories: 500\nYou did great today!")
+                    sendCalorieData(
+                        age: age,
+                        gender: gender,
+                        height: height,
+                        weight: weight,
+                        selectedActivities: selectedActivities,
+                        activityDurations: activityDurations,
+                        activityIntensity: activityIntensity,
+                        steps: steps,
+                        calories: calories,
+                        hoursOfSleep: hoursOfSleep,
+                        breakfast: breakfast,
+                        lunch: lunch,
+                        dinner: dinner,
+                        snack: snack
+                    ) { result in
+                        DispatchQueue.main.async {
+                            isLoading = false
+                            switch result {
+                            case .success(let output):
+                                resultToShow = CalorieResult(summary: output)
+                            case .failure(let error):
+                                resultToShow = CalorieResult(summary: "Error: \(error.localizedDescription)")
+                            }
+                        }
                     }
+                    
                 }
                 .font(.custom("AvenirNext-Regular", size: 22))
                 .padding()
