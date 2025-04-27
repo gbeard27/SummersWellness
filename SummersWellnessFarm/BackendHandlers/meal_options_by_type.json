@@ -1,0 +1,50 @@
+{
+  "Breakfast": [
+    "Avocado Toast with Poached Egg",
+    "Greek Yogurt with Berries and Granola",
+    "Overnight Oats with Almond Milk and Chia Seeds",
+    "Spinach and Feta Omelette",
+    "Berry Smoothie with Protein Powder",
+    "Banana Pancakes with Maple Syrup",
+    "Scrambled Eggs with Whole Grain Toast",
+    "Breakfast Burrito with Eggs and Veggies",
+    "Mini Veggie Frittatas",
+    "Whole Wheat Bagel with Cream Cheese and Tomato"
+  ],
+  "Lunch": [
+    "Quinoa Salad with Chickpeas and Lemon Vinaigrette",
+    "Sweet Potato and Black Bean Tacos",
+    "Lentil Soup with Whole Grain Bread",
+    "Cucumber and Hummus Sandwich",
+    "Turkey and Spinach Wrap",
+    "Grilled Chicken Caesar Wrap",
+    "Caprese Sandwich with Pesto Mayo",
+    "Vegetable Stir Fry with Jasmine Rice",
+    "Tomato Basil Soup with Grilled Cheese",
+    "Asian Chicken Salad with Sesame Dressing"
+  ],
+  "Dinner": [
+    "Grilled Salmon with Asparagus",
+    "Tofu Stir Fry with Brown Rice",
+    "Vegetable Curry with Basmati Rice",
+    "Eggplant Parmesan with Whole Wheat Pasta",
+    "Stuffed Bell Peppers with Ground Turkey and Quinoa",
+    "Grilled Chicken Buddha Bowl",
+    "Herb-Roasted Chicken Thighs with Potatoes",
+    "Chickpea and Spinach Stew",
+    "Pasta Primavera with Olive Oil and Garlic",
+    "Baked Cod with Lemon and Green Beans"
+  ],
+  "Snack": [
+    "Granola Bar",
+    "Banana",
+    "Apple Slices",
+    "Crackers and Cottage Cheese",
+    "Prosciutto Mozzarella Roll-up",
+    "Greek Yogurt Cup",
+    "Trail Mix",
+    "Cheese Cubes and Grapes",
+    "Hummus with Pretzel Sticks",
+    "Peanut Butter Pack with Celery Sticks"
+  ]
+}

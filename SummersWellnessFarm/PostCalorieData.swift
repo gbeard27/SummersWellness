@@ -69,7 +69,7 @@ func sendCalorieData(
         hoursOfSleep: hoursOfSleep
     )
 
-    guard let url = URL(string: "https://8y553o1ua3.execute-api.us-east-1.amazonaws.com/prod/ai-health-calc") else {
+    guard let url = URL(string: "// TODO: Insert API Gateway Endpoint URL here") else {
         completion(.failure(NSError(domain: "Invalid URL", code: 0)))
         return
     }
