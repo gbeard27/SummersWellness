@@ -9,7 +9,7 @@ import Foundation
 
 func fetchAIRecommendationFood(preferences: [String], completion: @escaping (String?) -> Void) {
     //API Gateway URL
-    guard let url = URL(string: "https://6jjaaxhcaj.execute-api.us-east-1.amazonaws.com/prod/ai-food") else {
+    guard let url = URL(string: "// TODO: Insert API Gateway Endpoint URL here") else {
         completion("Invalid URL")
         return
     }
