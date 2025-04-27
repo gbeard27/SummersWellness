@@ -3,6 +3,15 @@
 This app provides a personalized, health-focused experience for guests at Summers Wellness Farm, including wellness tracking, activity booking, event planning, and AI-powered recommendations.
 
 ---
+# 📚 Table of Contents
+- [Pages and Their Purpose](#-pages-and-their-purpose)
+- [AWS Lambda Setup Instructions](#-aws-lambda-setup-instructions)
+- [How to Create an OpenAI API Key](#-how-to-create-an-openai-api-key)
+- [Common AWS Setup Errors and Fixes](#-common-aws-setup-errors-and-fixes)
+- [System Flow Overview](#-system-flow-overview)
+- [Billing Reminders](#-billing-reminders)
+- [Deployment Final Checklist](#-deployment-final-checklist)
+---
 
 # 📚 Pages and Their Purpose
 
